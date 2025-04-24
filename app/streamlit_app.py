@@ -90,7 +90,7 @@ elif page == "Analysis Report":
 
     I analyzed the distribution of the target variable 'isFraud' to understand the prevalence of fraudulent transactions.
 
-    ![Target Distribution](app/res/Pasted image 20250424111039.png)
+    ![Target Distribution](https://github.com/parvpareek/fraud-detection/blob/main/app/res/target_distribution.png)
 
     > The dataset is heavily imbalanced.  
     > A ratio of **119474:161** →  
@@ -101,7 +101,7 @@ elif page == "Analysis Report":
 
     ### Step 3: Data Cleaning - Taming Outliers
 
-    ![Outlier Handling](app/res/Pasted image 20250424111502.png)
+    ![Outlier Handling](https://github.com/parvpareek/fraud-detection/blob/main/app/res/outlier_handling.png)
 
     - A few missing values in `newBalanceOrig` and `oldBalanceDest` were dropped.
     - Numerical outliers were capped at the 99th percentile.
@@ -112,17 +112,17 @@ elif page == "Analysis Report":
 
     #### Fraudulent Transactions per Step
 
-    ![Fraud per Step](app/res/Pasted image 20250424111620.png)  
+    ![Fraud per Step](https://github.com/parvpareek/fraud-detection/blob/main/app/res/fraud_per_step.png)  
     > Fraud happens randomly — no clear periodicity.
 
     #### Cumulative Fraudulent Transactions over Time
 
-    ![Cumulative Fraud](app/res/Pasted image 20250424111627.png)  
+    ![Cumulative Fraud](https://github.com/parvpareek/fraud-detection/blob/main/app/res/cumulative_fraud_over_time.png)  
     > Cumulative fraud steadily increases — ongoing risk.
 
     #### Distribution of Features: Fraud vs Non-Fraud
 
-    ![Feature Distributions](app/res/Pasted image 20250424111652.png)
+    ![Feature Distributions](https://github.com/parvpareek/fraud-detection/blob/main/app/res/distribution_features_fraud.png)
 
     > Fraudulent transactions:
     > - Tend to be larger in amount
@@ -130,12 +130,12 @@ elif page == "Analysis Report":
 
     #### Fraud by Transaction Type
 
-    ![Fraud by Type](app/res/Pasted image 20250424111701.png)  
+    ![Fraud by Type](https://github.com/parvpareek/fraud-detection/blob/main/app/res/Fraud%20by%20Type.png)  
     > **TRANSFER** and **CASH_OUT** are most fraud-prone
 
     #### Correlation Matrix
 
-    ![Correlation Matrix](app/res/Pasted image 20250424111706.png)
+    ![Correlation Matrix](res/correlation_matrix.png)
 
     > - `oldbalanceOrg` ~ `newbalanceOrig`  
     > - `oldbalanceDest` ~ `newbalanceDest`  
@@ -171,11 +171,10 @@ elif page == "Analysis Report":
 
     #### XGBoost Feature Importance
 
-    ![XGBoost Importances](app/res/Pasted image 20250424113141.png)
+    ![XGBoost Importances](https://github.com/parvpareek/fraud-detection/blob/main/app/res/feature_importance_xgboost.png)
 
     Additional ROC chart from external source:
 
-    ![ROC Curve](https://i.imgur.com/tP0Uh39.jpeg)
 
     ---
 
