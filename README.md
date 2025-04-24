@@ -1,6 +1,7 @@
 # fraud-detection
 
-## Data Analysis Report
+## [Live Demo](https://fraud-detection-analysis.streamlit.app/)
+## Data Analysis Report. 
 ### Introduction 
 
 Financial fraud is a pervasive problem, and detecting it early is crucial for businesses and individuals alike. In this blog post, we'll embark on a data-driven journey to analyze a dataset of financial transactions and build models to predict fraudulent activities.
