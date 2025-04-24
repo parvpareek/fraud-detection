@@ -1,29 +1,22 @@
-# app/streamlit_app.py
 import os
 import streamlit as st
 import pandas as pd
 import joblib
 
-# Centered layout
 st.set_page_config(layout="centered", page_title="Fraud Detection App")
 
 MODEL_PATH    = os.path.join('models','fraud_detector.joblib')
-FEATURES_PATH = os.path.join('data','features','transactions_features.csv')
+SAMPLES_PATH = os.path.join('data','samples','samples.csv')
 
 @st.cache_data()
 def load_samples():
-    df = pd.read_csv(FEATURES_PATH)
-    fraud    = df[df.isFraud == 1].sample(3, random_state=42)
-    nonfraud = df[df.isFraud == 0].sample(3, random_state=42)
-    sample_df = pd.concat([nonfraud, fraud]).reset_index(drop=True)
-    sample_df['sample_id'] = sample_df.index
-    return sample_df
+    df = pd.read_csv(SAMPLES_PATH)
+    return df
 
 # Load artifacts
 model   = joblib.load(MODEL_PATH)
 samples = load_samples()
 
-# Top‐level page selector
 page = st.sidebar.radio("🔀 Navigate", ["Fraud Detection", "Analysis Report"])
 
 if page == "Fraud Detection":
