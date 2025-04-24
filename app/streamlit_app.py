@@ -8,7 +8,6 @@ st.set_page_config(layout="centered", page_title="Fraud Detection App")
 MODEL_PATH    = os.path.join('models','fraud_detector.joblib')
 SAMPLES_PATH = os.path.join('data','samples','samples.csv')
 
-@st.cache_data()
 def load_samples():
     df = pd.read_csv(SAMPLES_PATH)
     return df
