@@ -76,7 +76,7 @@ I analyzed the distribution of the target variable 'isFraud' to understand the p
 
 #### Correlation Matrix
 
-![Correlation Matrix](res/correlation_matrix.png)
+![Correlation Matrix](app/res/correlation_matrix.png)
 
 > - oldbalanceOrg ~ newbalanceOrig  
 > - oldbalanceDest ~ newbalanceDest  
